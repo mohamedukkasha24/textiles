@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* hero section img alignment */
+.hero-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* subtle background for featured cards */
+.bg-success-subtle {
+  background-color: rgba(15, 157, 88, 0.06) !important;
+}
+
+/* make card content clickable via stretched-link */
+.card .stretched-link {
+  z-index: 1;
+}
+
+/* mobile tweaks */
+@media (max-width: 767.98px) {
+  header .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .hero-img-wrap img {
+    max-height: 260px;
+    object-fit: cover;
+  }
+}

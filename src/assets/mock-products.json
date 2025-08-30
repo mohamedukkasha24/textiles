@@ -1,0 +1,24 @@
+[
+  {
+    "id": "p1",
+    "name": "Kanchipuram Silk Saree",
+    "price": 5999,
+    "images": ["/assets/img/saree1.jpg"],
+    "category": "Saree",
+    "colors": ["Red", "Gold"],
+    "sizes": [],
+    "description": "Handwoven silk with zari border.",
+    "inStock": true
+  },
+  {
+    "id": "p2",
+    "name": "Cotton Check Shirt",
+    "price": 1299,
+    "images": ["/assets/img/shirt1.jpg"],
+    "category": "Shirt",
+    "colors": ["Blue", "Grey"],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "100% breathable cotton.",
+    "inStock": true
+  }
+]
