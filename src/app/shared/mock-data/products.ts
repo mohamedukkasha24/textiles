@@ -9,8 +9,9 @@ export const PRODUCTS: Product[] = [
     category: 'Saree',
     colors: ['Red', 'Green', 'Blue'],
     sizes: [],
-    description: 'Elegant silk saree with rich embroidery for festive occasions.',
-    inStock: true
+    description:
+      'Elegant silk saree with rich embroidery for festive occasions.',
+    inStock: true,
   },
   {
     id: '2',
@@ -20,8 +21,9 @@ export const PRODUCTS: Product[] = [
     category: 'Shirt',
     colors: ['White', 'Blue', 'Black'],
     sizes: ['S', 'M', 'L', 'XL'],
-    description: 'Comfortable cotton shirt, perfect for office and casual wear.',
-    inStock: true
+    description:
+      'Comfortable cotton shirt, perfect for office and casual wear.',
+    inStock: true,
   },
   {
     id: '3',
@@ -32,7 +34,7 @@ export const PRODUCTS: Product[] = [
     colors: ['Pink', 'Yellow'],
     sizes: ['2Y', '4Y', '6Y'],
     description: 'Trendy kids party wear outfit made with premium fabric.',
-    inStock: false
+    inStock: false,
   },
   {
     id: '4',
@@ -43,6 +45,6 @@ export const PRODUCTS: Product[] = [
     colors: ['Brown', 'Grey'],
     sizes: [],
     description: 'Custom fabrics sold per meter. Soft & durable.',
-    inStock: true
-  }
+    inStock: true,
+  },
 ];
