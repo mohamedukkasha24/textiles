@@ -1,5 +1,5 @@
-import { Component,inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CartService } from '../../core/services/cart.service';
 import { Product } from '../../shared/models/product.model';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { PRODUCTS } from '../../shared/mock-data/products';
 
 @Component({
   selector: 'app-product-details',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
 })

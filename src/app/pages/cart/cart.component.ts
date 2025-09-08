@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartService, CartItem } from '../../core/services/cart.service';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-cart',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })
 export class CartComponent implements OnInit {
   cartItems$!: Observable<CartItem[]>;
 
-  constructor(public cart: CartService) {}
+  constructor(public cart: CartService, public router: Router) {}
 
   ngOnInit() {
     this.cartItems$ = this.cart.itemsObs$; // subscribe reactive
@@ -31,5 +32,8 @@ export class CartComponent implements OnInit {
 
   remove(item: CartItem) {
     this.cart.remove(item.product.id);
+  }
+  proceedToCheckout() {
+    this.router.navigate(['/checkout']);
   }
 }

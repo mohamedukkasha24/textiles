@@ -1,1 +1,96 @@
-<p>contact works!</p>
+<!-- Hero Section -->
+<header class="py-5 bg-success-subtle text-center">
+  <div class="container">
+    <h1 class="fw-bold text-success">Contact Us</h1>
+    <p class="lead text-muted">
+      We’d love to hear from you! Get in touch with us today.
+    </p>
+  </div>
+</header>
+
+<!-- Contact Info + Form -->
+<section class="container py-5">
+  <div class="row g-5">
+    <!-- Contact Info -->
+    <div class="col-md-5">
+      <div class="mb-4">
+        <h5 class="fw-bold text-success">
+          <i class="bi bi-geo-alt-fill me-2"></i> Our Address
+        </h5>
+        <p class="text-muted">45/17 Textile Street, Tirunelveli, Tamil Nadu</p>
+      </div>
+      <div class="mb-4">
+        <h5 class="fw-bold text-success">
+          <i class="bi bi-telephone-fill me-2"></i> Phone
+        </h5>
+        <p class="text-muted">+91 80726 64173</p>
+      </div>
+      <div class="mb-4">
+        <h5 class="fw-bold text-success">
+          <i class="bi bi-envelope-fill me-2"></i> Email
+        </h5>
+        <p class="text-muted">support&#64;textileshop.com</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-md-7">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-4">Send us a Message</h5>
+
+          <!-- Native form ref for EmailJS -->
+          <form
+            #contactForm="ngForm"
+            #formRef="ngForm"
+            (ngSubmit)="sendEmail(contactForm, $event)"
+          >
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="form-label">Your Name</label>
+              <input
+                type="text"
+                class="form-control rounded-3"
+                name="name"
+                ngModel
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Your Email</label>
+              <input
+                type="email"
+                class="form-control rounded-3"
+                name="email"
+                ngModel
+                required
+              />
+            </div>
+
+            <!-- Message -->
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-control rounded-3"
+                rows="4"
+                name="message"
+                ngModel
+                required
+              ></textarea>
+            </div>
+
+            <button
+              class="btn btn-success rounded-pill px-4"
+              type="submit"
+              [disabled]="contactForm.invalid"
+            >
+              <i class="bi bi-send me-1"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

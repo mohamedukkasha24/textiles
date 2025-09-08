@@ -1,1 +1,111 @@
-<p>checkout works!</p>
+<div class="container py-5">
+  <h2 class="fw-bold mb-4">Checkout</h2>
+
+  <div class="card shadow-sm p-4">
+    <h5 class="mb-3">Billing Information</h5>
+
+    <form
+      (ngSubmit)="submitOrder(checkoutForm)"
+      #checkoutForm="ngForm"
+      novalidate
+    >
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          ngModel
+          name="name"
+          required
+          #name="ngModel"
+        />
+
+        <div *ngIf="name.invalid && name.touched" class="text-danger small">
+          Full Name is required.
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          email
+          #email="ngModel"
+        />
+
+        <div *ngIf="email.invalid && email.touched" class="text-danger small">
+          <span *ngIf="email.errors?.['required']">Email is required.</span>
+          <span *ngIf="email.errors?.['email']">Enter a valid email.</span>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea
+          id="address"
+          class="form-control"
+          ngModel
+          name="address"
+          rows="3"
+          required
+          #address="ngModel"
+        ></textarea>
+
+        <div
+          *ngIf="address.invalid && address.touched"
+          class="text-danger small"
+        >
+          Address is required.
+        </div>
+      </div>
+
+      <!-- Payment Method -->
+      <h5 class="mt-4 mb-3">Payment Method</h5>
+
+      <div class="mb-3">
+        <select
+          class="form-select"
+          ngModel
+          name="paymentMethod"
+          required
+          #paymentMethod="ngModel"
+        >
+          <option value="" disabled selected>Select payment method</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+
+        <div
+          *ngIf="paymentMethod.invalid && paymentMethod.touched"
+          class="text-danger small"
+        >
+          Please select a payment method.
+        </div>
+
+        <div
+          *ngIf="paymentMethod.invalid && paymentMethod.touched"
+          class="text-danger small"
+        >
+          Please select a payment method.
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="btn btn-success w-100"
+        [disabled]="checkoutForm.invalid"
+      >
+        <i class="bi bi-bag-check"></i> Place Order
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,79 +1,129 @@
 <!-- src/app/pages/home/home.page.html -->
 <header class="py-5 bg-light border-bottom">
-    <div class="container py-4 d-flex flex-column flex-md-row align-items-center gap-4">
-        <div class="flex-fill">
-            <h1 class="display-5 fw-bold text-success">Premium Textiles for Everyone</h1>
-            <p class="text-muted mb-3">
-                Sarees, shirts, kids wear, and custom fabrics — handpicked quality at great prices.
-            </p>
-            <div class="d-flex gap-2">
-                <a routerLink="/products" class="btn btn-success rounded-pill px-4">Shop Now</a>
-                <a routerLink="/about"
-                    class="btn btn-outline-secondary rounded-pill px-4 d-none d-md-inline-block">About Us</a>
-            </div>
-        </div>
-
-        <!-- hero image: keep an appropriate alt text for accessibility -->
-        <div class="hero-img-wrap">
-            <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-10/Top%20Saree%20Brands%20for%20Every%20Occasion%20Drape%20Yourself%20in%20Tradition.jpg" alt="Assorted folded textiles and sarees"
-                class="img-fluid rounded-4 shadow-sm w-100" style="max-width:520px;">
-        </div>
+  <div
+    class="container py-4 d-flex flex-column flex-md-row align-items-center gap-4"
+  >
+    <div class="flex-fill">
+      <h1 class="display-5 fw-bold text-success">
+        Premium Textiles for Everyone
+      </h1>
+      <p class="text-muted mb-3">
+        Sarees, shirts, kids wear, and custom fabrics — handpicked quality at
+        great prices.
+      </p>
+      <div class="d-flex gap-2">
+        <a routerLink="/products" class="btn btn-success rounded-pill px-4"
+          >Shop Now</a
+        >
+        <a
+          routerLink="/about"
+          class="btn btn-outline-secondary rounded-pill px-4 d-none d-md-inline-block"
+          >About Us</a
+        >
+      </div>
     </div>
+
+    <!-- hero image: keep an appropriate alt text for accessibility -->
+    <div class="hero-img-wrap">
+      <img
+        src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-10/Top%20Saree%20Brands%20for%20Every%20Occasion%20Drape%20Yourself%20in%20Tradition.jpg"
+        alt="Assorted folded textiles and sarees"
+        class="img-fluid rounded-4 shadow-sm w-100"
+        style="max-width: 520px"
+      />
+    </div>
+  </div>
 </header>
 
 <section class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="fw-bold m-0">Featured</h3>
-        <div class="d-flex gap-2 align-items-center">
-            <small class="text-muted">Handpicked collections</small>
-        </div>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3 class="fw-bold m-0">Trending</h3>
+    <div class="d-flex gap-2 align-items-center">
+      <small class="text-muted">Handpicked collections</small>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Featured cards (replace static cards with *ngFor when ready) -->
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center"
+      >
+        <img
+          src="https://cdn.sareeka.com/image/cache/data2023/digital-print-work-silk-designer-saree-in-pink-273806-1000x1375.jpg"
+          alt="Sarees"
+          class="img-fluid mb-3"
+          style="height: 110px; object-fit: cover"
+        />
+        <h6 class="fw-bold mb-1">Sarees</h6>
+        <p class="small text-muted mb-2">Handwoven & silk</p>
+        <a
+          routerLink="/products?category=Saree"
+          class="stretched-link"
+          aria-label="View sarees"
+        ></a>
+      </div>
     </div>
 
-    <div class="row g-4">
-        <!-- Featured cards (replace static cards with *ngFor when ready) -->
-        <div class="col-6 col-md-3">
-            <div
-                class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center">
-                <img src="https://cdn.sareeka.com/image/cache/data2023/digital-print-work-silk-designer-saree-in-pink-273806-1000x1375.jpg" alt="Sarees" class="img-fluid mb-3"
-                    style="height:110px; object-fit:cover;">
-                <h6 class="fw-bold mb-1">Sarees</h6>
-                <p class="small text-muted mb-2">Handwoven & silk</p>
-                <a routerLink="/products?category=Saree" class="stretched-link" aria-label="View sarees"></a>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-            <div
-                class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center">
-                <img src="https://frenchcrown.com/cdn/shop/articles/Featured_image.jpg?v=1723448896&width=2048" alt="Shirts" class="img-fluid mb-3"
-                    style="height:110px; object-fit:cover;">
-                <h6 class="fw-bold mb-1">Shirts</h6>
-                <p class="small text-muted mb-2">Casual & formal</p>
-                <a routerLink="/products?category=Shirt" class="stretched-link" aria-label="View shirts"></a>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-            <div
-                class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center">
-                <img src="https://indigrowkids.com/cdn/shop/articles/Copy_of_Eating_with_hands_1_1024x1024.png?v=1682538843" alt="Kids Wear" class="img-fluid mb-3"
-                    style="height:110px; object-fit:cover;">
-                <h6 class="fw-bold mb-1">Kids</h6>
-                <p class="small text-muted mb-2">Comfortable & cute</p>
-                <a routerLink="/products?category=Kids" class="stretched-link" aria-label="View kids wear"></a>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-            <div
-                class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center">
-                <img src="https://t4.ftcdn.net/jpg/01/62/28/09/360_F_162280951_WPnIPojcyNu7IkHNNieEEWwGvXDDNSlj.jpg" alt="Fabrics" class="img-fluid mb-3"
-                    style="height:110px; object-fit:cover;">
-
-                <h6 class="fw-bold mb-1">Fabrics</h6>
-                <p class="small text-muted mb-2">By the metre</p>
-                <a routerLink="/products?category=Fabric" class="stretched-link" aria-label="View fabrics"></a>
-            </div>
-        </div>
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center"
+      >
+        <img
+          src="https://frenchcrown.com/cdn/shop/articles/Featured_image.jpg?v=1723448896&width=2048"
+          alt="Shirts"
+          class="img-fluid mb-3"
+          style="height: 110px; object-fit: cover"
+        />
+        <h6 class="fw-bold mb-1">Shirts</h6>
+        <p class="small text-muted mb-2">Casual & formal</p>
+        <a
+          routerLink="/products?category=Shirt"
+          class="stretched-link"
+          aria-label="View shirts"
+        ></a>
+      </div>
     </div>
+
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center"
+      >
+        <img
+          src="https://indigrowkids.com/cdn/shop/articles/Copy_of_Eating_with_hands_1_1024x1024.png?v=1682538843"
+          alt="Kids Wear"
+          class="img-fluid mb-3"
+          style="height: 110px; object-fit: cover"
+        />
+        <h6 class="fw-bold mb-1">Kids</h6>
+        <p class="small text-muted mb-2">Comfortable & cute</p>
+        <a
+          routerLink="/products?category=Kids"
+          class="stretched-link"
+          aria-label="View kids wear"
+        ></a>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-0 bg-success-subtle p-4 rounded-4 text-center h-100 d-flex flex-column justify-content-center"
+      >
+        <img
+          src="https://t4.ftcdn.net/jpg/01/62/28/09/360_F_162280951_WPnIPojcyNu7IkHNNieEEWwGvXDDNSlj.jpg"
+          alt="Fabrics"
+          class="img-fluid mb-3"
+          style="height: 110px; object-fit: cover"
+        />
+
+        <h6 class="fw-bold mb-1">Fabrics</h6>
+        <p class="small text-muted mb-2">By the metre</p>
+        <a
+          routerLink="/products?category=Fabric"
+          class="stretched-link"
+          aria-label="View fabrics"
+        ></a>
+      </div>
+    </div>
+  </div>
 </section>
